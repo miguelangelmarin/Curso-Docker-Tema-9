@@ -21,7 +21,7 @@ jobs:
       run: mvn -B test
 
     - name: Build project with Maven
-      run: mvn -B install
+      run: mvn -B package
 
     - name: Get Version from POM.xml
       uses: entimaniac/read-pom-version-action@1.0.0
