@@ -8,4 +8,9 @@ public class ExampleTest {
 	public void exampleTest() {
 		Assert.assertTrue(true);
 	}
+
+	@Test
+	public void exampleTest2() {
+		Assert.assertTrue(false);
+	}
 }
