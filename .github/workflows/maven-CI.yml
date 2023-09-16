@@ -23,11 +23,18 @@ jobs:
     - name: Build project with Maven
       run: mvn -B install
 
+    - name: Get Version
+      uses: ./
+        id: getVersion
+
+    - name: Print the version
+      run: echo "The version we just got is ${{ steps.getVersion.outputs.version }}"
+
     - name: Copy generated .war to staging  
       run: mkdir staging && cp target/*.war staging
 
     - name: Upload generated .war to Artifact 
       uses: actions/upload-artifact@v3
       with:
-        name: Package
+        name: mvn-hello-world-${{ steps.getVersion.outputs.version }}.zip
         path: staging
