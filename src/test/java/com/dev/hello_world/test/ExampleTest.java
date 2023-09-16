@@ -1,4 +1,4 @@
-package com.dev3l.hello_world.test;
+package com.dev.hello_world.test;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -6,6 +6,6 @@ import org.junit.Test;
 public class ExampleTest {
 	@Test
 	public void exampleTest() {
-		Assert.assertTrue(true);
+		Assert.assertTrue(false);
 	}
 }
