@@ -25,15 +25,6 @@ jobs:
     - name: Build project with Maven
       run: mvn -B package
 
-  genera_artefacto:
-
-    runs-on: ubuntu-latest
-
-    steps:
-
-    - name: Hacemos Checkuot del repo de Git
-      uses: actions/checkout@v2
-
     - name: Get Version from POM.xml
       uses: entimaniac/read-pom-version-action@1.0.0
       id: getVersion
